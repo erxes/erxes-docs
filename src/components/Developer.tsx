@@ -29,7 +29,7 @@ interface Developer {
 const resources: Array<Developer > = [
   {
     href: '/sdks#create-general-plugin',
-    name: 'Create General Plugin',
+    name: 'Create Plugin',
     description:
       'With erxes, you can create your own plugins or extend the existing ones, which would help you to enhance your experience...',
     icon: ChatBubbleIcon,
@@ -39,17 +39,6 @@ const resources: Array<Developer > = [
         [1, 2],
         [1, 3],
       ],
-    },
-  },
-  {
-    href: '/sdks#create-integration-plugin',
-    name: 'Create Integration plugin',
-    description:
-      'Integration is the extent of the Inbox plugin, which allows third party softwares to be integrated to your shared Inbox.',
-    icon: ChatBubbleIcon,
-    pattern: {
-      y: 22,
-      squares: [[0, 1]],
     },
   },
 ]

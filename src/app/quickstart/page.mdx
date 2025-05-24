@@ -34,49 +34,40 @@ erxes installation requires at least four software prerequisites to be already i
 <Tabs>
   <Tab label="Ubuntu">
 - [Git](https://github.com/git-guides/install-git)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script>
-- [Node.js:](https://nodejs.org/en)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> only LTS versions are supported v18.17.1 or higher. Other versions of Node.js may not be compatible with the latest release of erxes. The 18.17.x version is most recommended by erxes. The easier way to install [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) is here.
-- [npm](https://docs.npmjs.com/cli/v6/commands/npm-install/)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> and [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> (latest version) to run the erxes. 
-- [Docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> Latest version.
+- [Node.js:](https://nodejs.org/en)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> only LTS versions are supported v21 or higher. The easier way to install [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) is here.
+- [pnpm](https://pnpm.io/installation)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> (latest version) to run the erxes. 
+- [mongodb](https://www.mongodb.com/docs/manual/installation/)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> 
+- [redis](https://redis.io/docs/latest/operate/oss_and_stack/install/archive/install-redis/)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> 
+- [Docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> If needed
 </Tab>
   <Tab label="MacOS">
 - [Git](https://github.com/git-guides/install-git)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script>
-- [Node.js:](https://nodejs.org/en)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> only LTS versions are supported v18.17.1 or higher. Other versions of Node.js may not be compatible with the latest release of erxes. The 18.17.x version is most recommended by erxes. The easier way to install [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) is here.
-- [npm](https://docs.npmjs.com/cli/v6/commands/npm-install/)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> and [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> (latest version) to run the erxes. 
-- [Docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> Latest version.
-- [Homebrew](https://brew.sh/)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> latest version
-- [Xcode](https://www.freecodecamp.org/news/install-xcode-command-line-tools/)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> latest version
+- [Node.js:](https://nodejs.org/en)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> only LTS versions are supported v21 or higher. The easier way to install [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) is here.
+- [pnpm](https://pnpm.io/installation)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> (latest version) to run the erxes. 
+- [mongodb](https://www.mongodb.com/docs/manual/installation/)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> 
+- [redis](https://redis.io/docs/latest/operate/oss_and_stack/install/archive/install-redis/)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> 
+- [Docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> If needed
+- [Homebrew](https://brew.sh/)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> latest version 
 </Tab>
 </Tabs>
 
-**Installing erxes**
+**Setting up databases**
 
-1. Create an empty folder.
-```tsx
-mkdir example
-```
-2. Navigate to your newly created folder where the new erxes project will be set up. This directory will define the database and erxes plugins to use.
-```tsx
-cd example
-```
-3. Run the following command in the folder.
-```tsx
-git clone https://github.com/erxes/erxes.git
-```
-**Installing dependencies using docker**
+<Note>
+If you are not using docker & installed databases you can skip this step
+</Note>
 
-4. In the folder, create a dock directory using the following command.
+1. In the folder, create a dock directory using the following command.
 ```tsx
 mkdir dock
 ```
-5. Go to the dock folder using the following command.
+2. Go to the dock folder using the following command.
 ```tsx
 cd dock
 ```
-<Note>
-Run sudo nano or sudo vim command to create the .yml file.
-</Note>
 
-6. Create a `docker-compose.yml` file, then copy the following script into the newly created file.
+
+3. Create a `docker-compose.yml` file, then copy the following script into the newly created file.
 <Tabs>
   <Tab label="Ubuntu">
 ```tsx
@@ -109,56 +100,6 @@ services:
       - "6379:6379"
     networks:
       - erxes-net
-
-  rabbitmq:
-    image: rabbitmq:3.7.17-management
-    # container_name: rabbitmq
-    restart: unless-stopped
-    hostname: rabbitmq
-    ports:
-      - "15672:15672"
-      - "5672:5672"
-    networks:
-      - erxes-net
-    # RabbitMQ data will be saved into ./rabbitmq-data folder.
-    volumes:
-      - ./rabbitmq-data:/var/lib/rabbitmq
-  
-  elasticsearch:
-    image: 'docker.elastic.co/elasticsearch/elasticsearch:7.13.0'
-    container_name: 'elasticsearch'
-    environment:
-      - discovery.type=single-node
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
-      nofile:
-        soft: 32768
-        hard: 65536
-    ports:
-      - '127.0.0.1:9200:9200'
-    networks:
-      - erxes-net
-    volumes:
-      - ./elasticsearchData:/usr/share/elasticsearch/data
-
-  essyncer:
-    container_name: essyncer
-    image: 'erxes/essyncer:dev'
-    environment:
-      DB_NAME: 'erxes'
-      ELASTICSEARCH_URL: 'http://elasticsearch:9200'
-      MONGO_URL: 'mongodb://mongo:27017/erxes?replicaSet=rs0'
-    depends_on:
-      - 'mongo'
-      - 'elasticsearch'
-    volumes:
-      - './essyncerData:/data/essyncerData'
-      - './mongoConnectorLog:/var/log/mongo-connector'
-    tty: true
-    networks:
-      - 'erxes-net'
 
 networks:
   erxes-net:
@@ -257,72 +198,40 @@ networks:
 Please find the useful [commands](https://docs.docker.com/engine/reference/commandline/compose_images/#related-commands)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> when you're working on Docker
 </Tip>
 
-7. In the folder where the above file is located, run the following command:
+4. In the folder where the above file is located, run the following command:
 ```tsx
 sudo docker-compose up -d
 ```
-8. Go back to the erxes folder using the following command.
+
+**Erxes installation**
+
+1. Git clone
 ```tsx
-cd ../erxes
+ git clone https://github.com/erxes/erxes-next.git
 ```
-9. Switch to the dev branch by using the following command.
+2. Position yourself at the root
 ```tsx
-git checkout dev
+cd erxes-next
 ```
-10. In erxes folder, Install node modules by using the following command.
+3. Setup env
 ```tsx
-yarn install
+cp .env.sample .env
 ```
-11. Install `pm2` by using the following command.
+4. Install dependencies
 ```tsx
-sudo npm install -g pm2
+pnpm install
+```
+5. Start APIS (backend)
+
+```tsx
+pnpm dev:apis
 ```
 
-**Running erxes**
+6. Start UIS (frontend)
 
-<Caution>
-Run erxes in erxes/cli directory
-</Caution>
-
-1. Run the following command to change the folder.
 ```tsx
-cd cli
+pnpm dev:uis
 ```
-2. Install node modules in the erxes/cli directory.
-```tsx
-yarn install
-```
-3. Copy `configs.json.sample`, then convert it to `configs.json.`
-```tsx
-cp configs.json.sample configs.json
-```
-4. Add `"ui": "local"` under every plugin names like shown in below, in `configs.json.`
-<Caution>
-You do not have to add it under `logs` plugin since it has no ui.
-</Caution>
-```tsx
- {
-    "name": "inbox",
-    "ui": "local"
- },
-```
-5. Run the following command to start your erxes project.
-```tsx
-./bin/erxes.js dev
-```
-
- **If your browser doesn't automatically jump to localhost:3000, you should check logs by using these commands.**
-
- <Tip>
-    Frequently used `pm2` commands on erxes:
-- pm2 list - Displays all processes status
-- pm2 kill - Will remove all processes from pm2 list
-- pm2 logs -f - Displays all processes logs in streaming (gateway, plugin-name etc.)
-- pm2 restart all - Restarts all processes
- </Tip>
-
- **If you see this screen, you have successfully installed erxes XOS. Congratulations 🎉🎉🎉**
- ![](https://imagedelivery.net/5m26Aj-CutMXPPNacMs_yQ/1bee4344-9c4b-4a37-e3f4-6e4b02211000/public)
 
 ---
 
