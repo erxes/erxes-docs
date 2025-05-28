@@ -7,7 +7,7 @@ import {Tabs, Tab} from '@/components/Tabs'
 export const metadata = {
   title: 'Quickstart',
   description:
-    'This guide will get you all set up and ready to use the Protocol API. We’ll cover how to get started an API client and how to make your first API request.',
+    'This guide will get you all set up and ready to use the Protocol API. We\'ll cover how to get started an API client and how to make your first API request.',
 }
 
 <HeroPattern />
@@ -32,70 +32,87 @@ erxes installation requires at least four software prerequisites to be already i
 **Prerequisites**
 
 <Tabs>
-  <Tab label="Ubuntu">
-- [Git](https://github.com/git-guides/install-git)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script>
-- [Node.js:](https://nodejs.org/en)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> only LTS versions are supported v21 or higher. The easier way to install [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) is here.
-- [pnpm](https://pnpm.io/installation)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> (latest version) to run the erxes. 
-- [mongodb](https://www.mongodb.com/docs/manual/installation/)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> 
-- [redis](https://redis.io/docs/latest/operate/oss_and_stack/install/archive/install-redis/)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> 
-- [Docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> If needed
-</Tab>
-  <Tab label="MacOS">
-- [Git](https://github.com/git-guides/install-git)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script>
-- [Node.js:](https://nodejs.org/en)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> only LTS versions are supported v21 or higher. The easier way to install [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) is here.
-- [pnpm](https://pnpm.io/installation)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> (latest version) to run the erxes. 
-- [mongodb](https://www.mongodb.com/docs/manual/installation/)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> 
-- [redis](https://redis.io/docs/latest/operate/oss_and_stack/install/archive/install-redis/)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> 
-- [Docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> If needed
-- [Homebrew](https://brew.sh/)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> latest version 
-</Tab>
+  <Tab label="Linux & MacOS">
+    <ul>
+      <li>[Git](https://github.com/git-guides/install-git)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script></li>
+      <li>[Node.js:](https://nodejs.org/en)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> only LTS versions are supported v21 or higher. The easier way to install [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) is here.</li>
+      <li>[pnpm](https://pnpm.io/installation)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> (latest version) to run the erxes.</li>
+      <li>[mongodb](https://www.mongodb.com/docs/manual/installation/)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script></li>
+      <li>[redis](https://redis.io/docs/latest/operate/oss_and_stack/install/archive/install-redis/)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script></li>
+      <li>[Docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> (Only needed if you don't have MongoDB and Redis installed locally)</li>
+    </ul>
+  </Tab>
+  <Tab label="Windows (WSL)">
+    1. Install WSL
+    Open PowerShell as Administrator and run: 
+    ```powershell
+    wsl --install
+    ```
+    You should now see a prompt to restart your computer. If not, restart it manually.
+
+    Upon restart, a powershell window will open and install Ubuntu. This may take up some time.
+    You'll see a prompt to create a username and password for your Ubuntu installation.
+
+    2. Install and configure git
+
+    ```bash
+    sudo apt-get install git
+
+    git config --global user.name "Your Name"
+
+    git config --global user.email "youremail@domain.com"
+    ```
+
+    3. Install nvm, node.js and yarn
+
+    ```bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
+    nvm install # installs recommended node version
+
+    nvm use # use recommended node version
+
+    npm install -g pnpm # install pnpm
+    ```
+
+    4. Install Docker Desktop for Windows from [Docker's official website](https://www.docker.com/products/docker-desktop)
+  </Tab>
 </Tabs>
+
+<Note>
+If you already have MongoDB and Redis installed and running on your local machine, you can skip the Docker installation. Just make sure your MongoDB and Redis instances are properly configured and running before starting erxes.
+</Note>
 
 **Setting up databases**
 
 <Note>
-If you are not using docker & installed databases you can skip this step
+If you are using locally installed MongoDB and Redis, you can skip this step. Make sure your MongoDB instance is running and accessible at mongodb://localhost:27017 and Redis at redis://localhost:6379
 </Note>
 
-1. In the folder, create a dock directory using the following command.
+If you need to set up databases using Docker:
+
+1. Create a dock directory
 ```tsx
-mkdir dock
-```
-2. Go to the dock folder using the following command.
-```tsx
-cd dock
+mkdir dock && cd dock
 ```
 
-
-3. Create a `docker-compose.yml` file, then copy the following script into the newly created file.
-<Tabs>
-  <Tab label="Ubuntu">
+2. Create a `docker-compose.yml` file with the following minimal configuration:
 ```tsx
 version: '3.6'
 services:
   mongo:
     hostname: mongo
     image: mongo:4.0.10
-    # container_name: mongo
     ports:
       - "27017:27017"
     networks:
       - erxes-net
-    healthcheck:
-      test: test $$(echo "rs.initiate().ok || rs.status().ok" | mongo --quiet) -eq 1
-      interval: 2s
-      timeout: 2s
-      retries: 200
     command: ["--replSet", "rs0", "--bind_ip_all"]
-    extra_hosts:
-      - "mongo:127.0.0.1"
     volumes:
       - ./data/db:/data/db
 
   redis:
     image: 'redis'
-    # container_name: redis
-    # command: redis-server --requirepass pass
     ports:
       - "6379:6379"
     networks:
@@ -105,102 +122,10 @@ networks:
   erxes-net:
     driver: bridge
 ```
-</Tab>
-<Tab label="MacOS">
+
+3. Start the databases
 ```tsx
-version: '3.6'
-services:
-  mongo:
-    hostname: mongo
-    image: mongo:4.0.10
-    # container_name: mongo
-    ports:
-      - "27017:27017"
-    networks:
-      - erxes-net
-    healthcheck:
-      test: test $$(echo "rs.initiate().ok || rs.status().ok" | mongo --quiet) -eq 1
-      interval: 2s
-      timeout: 2s
-      retries: 200
-    command: ["--replSet", "rs0", "--bind_ip_all"]
-    extra_hosts:
-      - "mongo:127.0.0.1"
-    volumes:
-      - ./data/db:/data/db
-
-  redis:
-    image: 'redis'
-    # container_name: redis
-    # command: redis-server --requirepass pass
-    ports:
-      - "6379:6379"
-    networks:
-      - erxes-net
-
-  rabbitmq:
-    image: rabbitmq:3.7.17-management
-    # container_name: rabbitmq
-    restart: unless-stopped
-    hostname: rabbitmq
-    ports:
-      - "15672:15672"
-      - "5672:5672"
-    networks:
-      - erxes-net
-    # RabbitMQ data will be saved into ./rabbitmq-data folder.
-    volumes:
-      - ./rabbitmq-data:/var/lib/rabbitmq
-  
-  elasticsearch:
-    image: 'docker.elastic.co/elasticsearch/elasticsearch:7.13.0-arm64'
-    container_name: 'elasticsearch'
-    environment:
-      - discovery.type=single-node
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
-      nofile:
-        soft: 32768
-        hard: 65536
-    ports:
-      - '127.0.0.1:9200:9200'
-    networks:
-      - erxes-net
-    volumes:
-      - ./elasticsearchData:/usr/share/elasticsearch/data
-
-  essyncer:
-    container_name: essyncer
-    image: 'erxes/essyncer:dev'
-    environment:
-      DB_NAME: 'erxes'
-      ELASTICSEARCH_URL: 'http://elasticsearch:9200'
-      MONGO_URL: 'mongodb://mongo:27017/erxes?replicaSet=rs0'
-    depends_on:
-      - 'mongo'
-      - 'elasticsearch'
-    volumes:
-      - './essyncerData:/data/essyncerData'
-      - './mongoConnectorLog:/var/log/mongo-connector'
-    tty: true
-    networks:
-      - 'erxes-net'
-
-networks:
-  erxes-net:
-    driver: bridge
-```
-</Tab>
-</Tabs>
-<Tip>
-Please find the useful [commands](https://docs.docker.com/engine/reference/commandline/compose_images/#related-commands)<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script> when you're working on Docker
-</Tip>
-
-4. In the folder where the above file is located, run the following command:
-```tsx
-sudo docker-compose up -d
+docker-compose up -d
 ```
 
 **Erxes installation**
@@ -217,18 +142,25 @@ cd erxes-next
 ```tsx
 cp .env.sample .env
 ```
-4. Install dependencies
+
+4. Configure the environment variables
+```tsx
+MONGO_URL=mongodb://localhost:27017/erxes?directConnection=true
+REDIS_URL=redis://localhost:6379
+NODE_OPTIONS=--max-old-space-size=1536
+NODE_ENV=development
+```
+
+5. Install dependencies
 ```tsx
 pnpm install
 ```
-5. Start APIS (backend)
-
+6. Start APIS (backend)
 ```tsx
 pnpm dev:apis
 ```
 
-6. Start UIS (frontend)
-
+7. Start UIS (frontend)
 ```tsx
 pnpm dev:uis
 ```
